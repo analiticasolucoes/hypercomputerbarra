@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relatório de Aniversariantes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #000;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .text-right {
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Relatório de Aniversariantes</h1>
+<h2>Período: <span id="dataInicial">{data_inicial}</span> a <span id="dataFinal">{data_final}</span></h2>
+
+<table>
+  <thead>
+  <tr>
+    <th><strong>ID</strong></th>
+    <th><strong>Nome Completo</strong></th>
+    <th><strong>CPF</strong></th>
+    <th><strong>Data de Nascimento</strong></th>
+    <th><strong>Idade</strong></th>
+    <th><strong>Email</strong></th>
+    <th><strong>Celular</strong></th>
+    <th><strong>Preferência de Contato</strong></th>
+    <th><strong>Endereço Completo</strong></th>
+  </tr>
+  </thead>
+  <tbody>
+  {tabela}
+  </tbody>
+</table>
+
+</body>
+</html>

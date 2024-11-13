@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abertura de Ordem de Serviço - Hyper Computer</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+        border-radius: 5px 5px 0 0;
+    }
+    .content {
+        margin: 20px 0;
+    }
+    .footer {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 0.9em;
+        color: #777;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://hypercomputerbarra.com.br/img/hyper.png" alt="Logotipo Hyper Computer">
+            <h1>Nova Ordem de Serviço</h1>
+        </div>
+        <div class="content">
+            <p>Olá, {cliente_nome},</p>
+            <p>Informamos que uma nova ordem de serviço foi aberta com os seguintes detalhes:</p>
+            <ul>
+                <li><strong>Número da OS:</strong> {os_numero}</li>
+                <li><strong>Data de Abertura:</strong> {os_data}</li>
+                <li><strong>Equipamento:</strong> {os_equipamento}</li>
+                <li><strong>Responsável:</strong> {os_responsavel}</li>
+            </ul>
+            <p>Nosso prazo de atendimento médio é de 2 (dois) dias úteis e assim que possível lhe enviaremos um orçamento referente seu equipamento.
+                Por favor, entre em contato conosco caso tenha alguma dúvida.</p>
+            <p>Atenciosamente,</p>
+            <p><strong>Hyper Computer</strong></p>
+        </div>
+        <div class="footer">
+            <p>&copy; {ano_atual} Hyper Computer. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

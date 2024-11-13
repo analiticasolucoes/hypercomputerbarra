@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Reparo de Equipamento de Informática</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .budget-table th, .budget-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .budget-table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .budget-table td {
+            text-align: right;
+        }
+        .budget-table td:first-child {
+            text-align: left;
+        }
+        .signature {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .signature p {
+            margin: 5px 0;
+        }
+        .budget-approve-link {
+            display: inline-block;
+            background-color: #7DC144;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+            margin-left: 42%;
+        }
+        .budget-approve-link:hover {
+            background-color: #39932C;
+        }
+        .budget-approve-link:visited {
+            color: #ffffff;
+        }
+        .budget-approve-link:active {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://hypercomputerbarra.com.br/img/hyper.png" alt="Logotipo Hyper Computer">
+        <h1>Orçamento de Serviço - Hyper Computer</h1>
+    </div>
+    <div class="content">
+        <h2>ORDEM DE SERVIÇO</h2>
+        <p>
+            <strong>No:</strong> {os_numero}<br>
+            <strong>Data:</strong> {os_data}
+        </p>
+        <h2>CLIENTE</h2>
+        <p>
+            <strong>NOME:</strong> {cliente_nome}<br>
+            <strong>ENDEREÇO:</strong> {cliente_endereco}<br>
+            <strong>BAIRRO:</strong> {cliente_bairro}<br>
+            <strong>CIDADE:</strong> {cliente_cidade}<br>
+            <strong>CEP:</strong> {cliente_cep}<br>
+            <strong>CELULAR:</strong> {cliente_celular}
+        </p>
+        <h2>EQUIPAMENTO</h2>
+        <p>
+            <strong>NOME:</strong> {equipamento_nome}<br>
+            <strong>MARCA:</strong> {equipamento_marca}<br>
+            <strong>MODELO:</strong> {equipamento_modelo}<br>
+            <strong>SÉRIE:</strong> {equipamento_serie}
+        </p>
+        <h3>DEFEITO</h3>
+        <p>{defeito}</p>
+        <h3>SOLUÇÃO</h3>
+        <p>{solucao}</p>
+        <h2>ORÇAMENTO</h2>
+        <table class="budget-table">
+            <thead>
+            <tr>
+                <th>Serviço (R$)</th>
+                <th>Peças (R$)</th>
+                <th>Total (R$)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{servico_valor}</td>
+                <td>{pecas_valor}</td>
+                <td>{orcamento_total}</td>
+            </tr>
+            </tbody>
+        </table>
+        <p>Para autorizar a execução deste serviço, basta clicar no botão <strong>APROVAR ORÇAMENTO</strong> abaixo ou entrar em contato com nosso atendimento através dos números <strong>(21) 3411-6826</strong> / <strong>(21) 3328-0354</strong> </p>
+        <a href="https://hypercomputerbarra.com.br/os/budget/email/approve?id={os_id}" class="budget-approve-link"><strong>APROVAR ORÇAMENTO</strong></a>
+        <p><strong>Este orçamento é válido por 10 (dez) dias</strong>, contado a partir da data de seu envio.</p>
+        <h3>NOTIFICAÇÕES:</h3>
+        <p>O cliente assume a responsabilidade pela legitimidade dos programas que instalar na máquina ou cuja instalação solicitar, e pela regularidade da aquisição do equipamento. O serviço não inclui realização prévia de backup, o qual deverá ser providenciado pelo cliente. Em caso de perda de dados, não seremos responsáveis por danos indiretos ou lucros cessantes.</p>
+        <p>Equipamentos abandonados após 90 dias de nossa comunicação, serão desmontados e as peças serão usadas em outros serviços como compensação pela guarda ou uso de material utilizado no serviço.</p>
+        <div class="signature">
+            <p>HYPERCOMPUTER</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; {ano_atual} HYPERCOMPUTER. Todos os direitos reservados.</p>
+        <p>Promo Info - Av. das Américas, 6700 - Barra - Loja 113 e Stand 15 e 16</p>
+        <p>Tel.: 21 3411 6826 - 21 3328-0354 - hyper@hypercomputer.com.br</p>
+        <p>CNPJ: 10.421.827/0001-22</p>
+    </div>
+</div>
+</body>
+</html>

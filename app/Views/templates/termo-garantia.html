@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo de Garantia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            margin-top: 10px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .header img {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .billing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .billing-table th, .billing-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .billing-table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .billing-table td {
+            text-align: right;
+        }
+        .billing-table td:first-child {
+            text-align: left;
+        }
+        .signature {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .signature p {
+            margin: 5px 0;
+        }
+        .notification {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://hypercomputerbarra.com.br/img/hyper.jpg" width="225px" height="80px" alt="Logotipo Hyper Computer">
+        <h1>Termo de Garantia</h1>
+    </div>
+    <div class="content">
+        <h2>ORDEM DE SERVIÇO</h2>
+        <p>
+            <strong>No:</strong> {os_numero}<br>
+            <strong>Data:</strong> {os_data}
+        </p>
+        <h2>CLIENTE</h2>
+        <p>
+            <strong>NOME:</strong> {cliente_nome}<br>
+            <strong>ENDEREÇO:</strong> {cliente_endereco}<br>
+            <strong>BAIRRO:</strong> {cliente_bairro}<br>
+            <strong>CIDADE:</strong> {cliente_cidade} CEP: {cliente_cep}<br>
+            <strong>CELULAR:</strong> {cliente_celular}
+        </p>
+        <h2>EQUIPAMENTO</h2>
+        <p>
+            <strong>NOME:</strong> {equipamento_nome}<br>
+            <strong>MARCA:</strong> {equipamento_marca}<br>
+            <strong>MODELO:</strong> {equipamento_modelo}<br>
+            <strong>SÉRIE:</strong> {equipamento_serie}<br>
+            <strong>DATA DE ENTREGA:</strong> {equipamento_data_entrega}<br>
+            <strong>FIM DA GARANTIA:</strong> {equipamento_fim_garantia}
+        </p>
+        <h3>DEFEITO</h3>
+        <p>{equipamento_defeito}</p>
+        <h3>SOLUÇÃO</h3>
+        <p>{equipamento_solucao}</p>
+        <h3>ATENDIMENTO</h3>
+        <p>{usuario_nome}</p>
+        <h3>ACESSÓRIOS</h3>
+        <p>{equipamento_acessorios}</p>
+        <div class="notification">
+            <h2>Notificações</h2>
+            <p>As garantias dos serviços acordados entre as partes terão prazo de 90 dias a contar da data de retirada do equipamento, e só serão válidas com a apresentação do termo de garantia. É de responsabilidade do cliente o transporte do equipamento, não cobriremos danos físicos ou avarias causadas após a retirada em perfeito estado.</p>
+            <p>O cliente assume a responsabilidade pela legitimidade dos programas que instalar na máquina ou cuja instalação solicitar, e pela regularidade da aquisição do equipamento. O serviço não inclui realização prévia de backup, o qual deverá ser providenciado pelo cliente.</p>
+            <p>Em caso de perda de dados, não seremos responsáveis por danos indiretos ou lucros cessantes.</p>
+            <p>Equipamentos abandonados após 90 dias de nossa comunicação, serão desmontados e as peças serão usadas em outros serviços como compensação pela guarda ou uso de material utilizado no serviço.</p>
+        </div>
+        <div class="signature">
+            <p>_____________________________<br>{cliente_nome}</p>
+            <p>_____________________________<br>HYPERCOMPUTER</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; {ano_atual} HYPERCOMPUTER. Todos os direitos reservados.</p>
+        <p>Promo Info - Av. das Américas, 6700 - Barra - Loja 113 e Stand 15 e 16</p>
+        <p>Tel.: 21 3411 6826 - 21 3328-0354 - hyper@hypercomputer.com.br</p>
+        <p>CNPJ: 10.421.827/0001-22</p>
+    </div>
+</div>
+</body>
+</html>

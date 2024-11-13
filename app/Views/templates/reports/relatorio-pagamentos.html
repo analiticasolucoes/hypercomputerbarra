@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Pagamentos</title>
+    <style>
+        body {
+            font-family: helvetica, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .meta-data {
+            margin-bottom: 20px;
+        }
+        .meta-data strong {
+            display: inline-block;
+            width: 150px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Relatório de Pagamentos</h1>
+    <div class="meta-data">
+        <strong>Período:</strong> {data_inicial} a {data_final}<br>
+        <strong>Quantidade:</strong> {qtd_pagamentos}<br>
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th><strong>Data do Pagamento</strong></th>
+            <th><strong>Número da OS</strong></th>
+            <th><strong>Cliente</strong></th>
+            <th><strong>Valor de Peças (R$)</strong></th>
+            <th><strong>Valor de Serviço (R$)</strong></th>
+            <th><strong>Valor Total (R$)</strong></th>
+            <th><strong>Método de Pagamento</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        {tabela}
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="5"><strong>Total:</strong></td>
+            <td>{valor_total_geral}</td>
+            <td></td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+</body>
+</html>

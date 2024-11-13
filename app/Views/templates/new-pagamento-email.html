@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informação de Pagamento e Retirada - Ordem de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+        }
+        .header img {
+            max-height: 50px;
+            margin-right: 20px;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777;
+        }
+        .billing-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .billing-table th, .billing-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        .billing-table th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        .billing-table td {
+            text-align: right;
+        }
+        .billing-table td:first-child {
+            text-align: left;
+        }
+        .signature {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .signature p {
+            margin: 5px 0;
+        }
+        .notification {
+            background-color: #dff0d8;
+            color: #3c763d;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="https://hypercomputerbarra.com.br/img/hyper.png" alt="Logotipo Hyper Computer">
+        <h1>Informação de Pagamento e Retirada - Hyper Computer</h1>
+    </div>
+    <div class="content">
+        <h2>ORDEM DE SERVIÇO</h2>
+        <p>
+            <strong>No:</strong> {os_numero}<br>
+            <strong>Data:</strong> {os_data}
+        </p>
+        <h2>CLIENTE</h2>
+        <p>
+            <strong>NOME:</strong> {cliente_nome}<br>
+            <strong>ENDEREÇO:</strong> {cliente_endereco}<br>
+            <strong>BAIRRO:</strong> {cliente_bairro}<br>
+            <strong>CIDADE:</strong> {cliente_cidade} CEP: {cliente_cep}<br>
+            <strong>CELULAR:</strong> {cliente_celular}
+        </p>
+        <h2>EQUIPAMENTO</h2>
+        <p>
+            <strong>NOME:</strong> {equipamento_nome}<br>
+            <strong>MARCA:</strong> {equipamento_marca}<br>
+            <strong>MODELO:</strong> {equipamento_modelo}<br>
+            <strong>SÉRIE:</strong> {equipamento_serie}
+        </p>
+        <h3>DEFEITO</h3>
+        <p>{defeito}</p>
+        <h3>SOLUÇÃO</h3>
+        <p>{solucao}</p>
+        <h2>PAGAMENTO</h2>
+        <table class="billing-table">
+            <thead>
+            <tr>
+                <th>Data</th>
+                <th>Serviço (R$)</th>
+                <th>Peças (R$)</th>
+                <th>Total (R$)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{data_pagamento}</td>
+                <td>{servico_valor}</td>
+                <td>{pecas_valor}</td>
+                <td>{faturamento_total}</td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="notification">
+            <h2>Equipamento Disponível para Retirada</h2>
+            <p>Prezado(a) {cliente_nome},</p>
+            <p>Informamos que o seu equipamento está pronto e disponível para retirada. Por favor, dirija-se à nossa loja para recolher o equipamento.</p>
+            <p>Para qualquer dúvida ou esclarecimento, entre em contato com nosso atendimento através dos números <strong>(21) 3411-6826</strong> / <strong>(21) 3328-0354</strong>.</p>
+        </div>
+        <div class="signature">
+            <p>HYPERCOMPUTER</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; {ano_atual} HYPERCOMPUTER. Todos os direitos reservados.</p>
+        <p>Promo Info - Av. das Américas, 6700 - Barra - Loja 113 e Stand 15 e 16</p>
+        <p>Tel.: 21 3411 6826 - 21 3328-0354 - hyper@hypercomputer.com.br</p>
+        <p>CNPJ: 10.421.827/0001-22</p>
+    </div>
+</div>
+</body>
+</html>

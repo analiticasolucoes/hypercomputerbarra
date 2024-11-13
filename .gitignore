@@ -1,0 +1,8 @@
+# Ignorar o arquivo .env
+.env
+
+# Ignorar o diretório vendor
+/vendor/
+
+#Igonar o diretório de config da ide
+/.idea/

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Status das Ordens de Serviço</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #000;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .summary, .analysis, .conclusions {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Relatório de Status das Ordens de Serviço</h1>
+<h2>Período: {data_inicial} a {data_final}</h2>
+
+<table>
+    <thead>
+    <tr>
+        <th>Estágio</th>
+        <th>Quantidade</th>
+        <th>Tempo Médio de Resolução (horas)</th>
+    </tr>
+    </thead>
+    <tbody>
+    {tabela}
+    </tbody>
+</table>
+
+<div class="summary">
+    <h3>Resumo:</h3>
+    <p>Total de Ordens de Serviço Concluídas: {total_os_concluidas}</p>
+    <p>Tempo Médio de Resolução: {tempo_medio_resolucao} horas</p>
+</div>
+
+<div class="analysis">
+    <h3>Análise:</h3>
+    <p>Durante o período de {data_inicial} a {data_final}, a equipe técnica concluiu um total de {total_os_concluidas} ordens de serviço. O tempo médio de resolução das ordens de serviço foi de
+        {tempo_medio_resolucao} horas.</p>
+</div>
+
+<div class="conclusions">
+    <h3>Conclusões:</h3>
+    <ul>
+        <li>Implementar treinamentos periódicos focados em técnicas de resolução de problemas e no uso eficiente de ferramentas.</li>
+        <li>Analisar os casos de maior tempo de resolução para identificar gargalos e possíveis melhorias no processo.</li>
+        <li>Realizar uma análise detalhada das ordens de serviço reabertas para identificar causas comuns e implementar soluções preventivas.</li>
+        <li>Promover workshops e sessões de revisão de qualidade para a equipe técnica, destacando a importância da precisão e qualidade no trabalho.</li>
+    </ul>
+</div>
+</body>
+</html>
