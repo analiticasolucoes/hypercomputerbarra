@@ -6,3 +6,6 @@
 
 #Igonar o diretório de config da ide
 /.idea/
+
+# Ignorar o diretório de documentação
+/app/docs/
